@@ -1,3 +1,4 @@
+# NOT READY YET! A WORK IN PROGRESS!
 
 # Synopsis
 A simple milti-vendor telephony library.
