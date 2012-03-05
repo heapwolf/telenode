@@ -1,0 +1,33 @@
+{
+  "name": "telenode",
+  "description": "A multi-vendor library for celular network services",
+  "version": "0.0.1",
+  "author": "Nodejitsu Inc <info@nodejitsu.com>",
+  "contributors": [
+    { "name": "Paolo Fragomeni", "email": "paolo@nodejitsu.com" }
+  ],
+  "keywords": [
+    "telephony",
+    "sms",
+    "phone",
+    "cell",
+    "celular",
+    "mms",
+    "cellphone",
+    "alerts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hij1nx/telenode.git"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "main": "./lib/telenode",
+  "engines": {
+    "node": ">=0.4.x"
+  },
+  "scripts": {
+    "test": "node test/*-test.js"
+  }
+}
