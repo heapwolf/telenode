@@ -1,7 +1,7 @@
 # NOT READY YET! A WORK IN PROGRESS!
 
 # Synopsis
-Multi-vendor celular network services for node.js
+Multi-vendor cellular network services for node.js
 
 # Motivation
 Everything else sucks

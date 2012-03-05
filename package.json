@@ -1,6 +1,6 @@
 {
   "name": "telenode",
-  "description": "A multi-vendor library for celular network services",
+  "description": "A multi-vendor library for cellular network services",
   "version": "0.0.1",
   "author": "Nodejitsu Inc <info@nodejitsu.com>",
   "contributors": [
@@ -8,12 +8,12 @@
   ],
   "keywords": [
     "telephony",
-    "sms",
-    "phone",
-    "cell",
-    "celular",
-    "mms",
     "cellphone",
+    "celular",
+    "cell",
+    "phone",
+    "sms",
+    "mms",
     "alerts"
   ],
   "repository": {
