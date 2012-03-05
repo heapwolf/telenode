@@ -1,7 +1,7 @@
 # NOT READY YET! A WORK IN PROGRESS!
 
 # Synopsis
-A simple milti-vendor telephony library.
+Multi-vendor celular network services for node.js
 
 # Motivation
 Everything else sucks
