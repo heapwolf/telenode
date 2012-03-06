@@ -1,4 +1,4 @@
-# NOT READY YET! WORK IN PROGRESS! I JUST NEEDED TO SEND A TEXT MESSAGE =)
+# NOT READY YET! WORK IN PROGRESS!
 
 # Synopsis
 Multi-vendor cellular network services for node.js
@@ -16,7 +16,7 @@ Everything else sucks
 
 # Usage
 
-## Simple example
+## Example
 
 ```js
 var Telenode = require('telenode');
@@ -30,12 +30,42 @@ client.SMS.send({
 
 ```
 
+# Vendors and Authors
+Create a file that has the name of the service, place it in the providers directory. Everything that is exported is attached to the new `Telenode` instance. Let's say we create a file called `foobar.js`.
+
+```js
+//
+// this will become available on the new instance.
+//
+exports.getSomeInfo = function() { 
+  console.log('here it is'); 
+};
+
+//
+// create containers one level deep. they get bound to the correct context for you.
+//
+exports.Container = {
+  getTheSameInfo: function() { this.getInfo(); },
+  getSomeNewInfo: function() { console.log('something new'); }
+};
+
+```
+
+```js
+var client = new Telenode(new Telenode.providers.foobar);
+
+//
+// This will output some text to the console.
+//
+client.Container.getTheSameInfo();
+client.Container.getSomeInfo();
+```
+
+
 # Installation
 
 # Build Status
 
 # API
-
-# Vendors and Authors
 
 # License

@@ -1,5 +1,7 @@
 
-var Telenode = require('../lib/telenode');
+var Telenode = require('../lib/telenode'),
+    assert = require('assert');
+
 var client = new Telenode(Telenode.providers.twilio);
 
 //
@@ -22,6 +24,12 @@ client.SMS.send(
     body: 'Hello'
   },
   function(err, data) {
-    console.log(err || data);
+
+    //
+    // make sure we get a response that includes the
+    // sid that we sent in the original POST request.
+    //
+    data = JSON.parse(data);
+    assert.equal(data.sid, cred.sid);
   }
 );
