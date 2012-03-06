@@ -1,7 +1,7 @@
 {
   "name": "telenode",
   "description": "A multi-vendor library for cellular network services",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Nodejitsu Inc <info@nodejitsu.com>",
   "contributors": [
     { "name": "Paolo Fragomeni", "email": "paolo@nodejitsu.com" }

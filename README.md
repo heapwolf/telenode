@@ -1,4 +1,4 @@
-# NOT READY YET! A WORK IN PROGRESS!
+# NOT READY YET! WORK IN PROGRESS! I JUST NEEDED TO SEND A TEXT MESSAGE =)
 
 # Synopsis
 Multi-vendor cellular network services for node.js
