@@ -30,6 +30,6 @@ client.SMS.send(
     // sid that we sent in the original POST request.
     //
     data = JSON.parse(data);
-    assert.equal(data.sid, cred.sid);
+    assert.equal(data.sid, creds.sid);
   }
 );

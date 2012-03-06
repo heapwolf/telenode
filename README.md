@@ -1,4 +1,3 @@
-# NOT READY YET! WORK IN PROGRESS!
 
 # Synopsis
 Multi-vendor cellular network services for node.js
@@ -9,7 +8,6 @@ Everything else sucks
 # Features
 - Send SMS
 - Make and Recieve Phone calls
-- Simple API
 
 # Providers
 - Twillio (SMS, Call)
@@ -55,10 +53,30 @@ exports.Container = {
 var client = new Telenode(new Telenode.providers.foobar);
 
 //
-// This will output some text to the console.
+// This is a contrived example that will simply output text to the console,
+// but it demonstrates how the module will be attached to the instance.
 //
 client.Container.getTheSameInfo();
 client.Container.getSomeInfo();
+```
+
+Often your API service will want to let you know after some operation has finished. The plugin structure provides a web server to listen for API services that want to call back. In your provider module, you can add routes for this.
+
+```js
+exports.getSomeInfo = function() { 
+  
+  this.HTTP.route({
+
+    '/inbound/url/sample/',
+    'POST',
+    function(data) {
+
+      //
+      // handle the inbound request from the API service.
+      //
+    }
+  });
+};
 ```
 
 
@@ -69,3 +87,12 @@ client.Container.getSomeInfo();
 # API
 
 # License
+(The MIT License)
+
+Copyright (c) 2010 hij1nx <http://www.twitter.com/hij1nx>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
