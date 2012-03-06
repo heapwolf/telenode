@@ -17,8 +17,8 @@ client.credentials(creds);
 //
 client.SMS.send(
   {
-    from: '+1-4150-799-3546',
-    to: '+1-917-224-8228',
+    from: '+1-111-111-1111',
+    to: '+1-111-111-1111',
     body: 'Hello'
   },
   function(err, data) {
