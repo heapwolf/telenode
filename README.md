@@ -1,4 +1,3 @@
-
 # Synopsis
 Multi-vendor cellular network services for node.js
 
@@ -18,7 +17,7 @@ Everything else sucks
 
 ```js
 var Telenode = require('telenode');
-var client = new Telenode(new Telenode.providers.twilio);
+var client = new Telenode(Telenode.providers.twilio);
 
 client.SMS.send({
   from: '+1-917-123-9876', 
