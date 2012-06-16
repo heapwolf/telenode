@@ -23,6 +23,9 @@ client.SMS.send({
   from: '+1-917-123-9876', 
   to: '+1-917-123-9876', 
   body: 'Hello'
+}, function(err, body) {
+  if (err) throw err;
+  console.log('Body: ' + body);
 });
 
 ```
