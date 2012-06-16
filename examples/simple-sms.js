@@ -1,5 +1,4 @@
-
-var Telenode = require('../lib/telenode');
+var Telenode = require('telenode');
 var client = new Telenode(Telenode.providers.twilio);
 
 client.credentials({
@@ -8,8 +7,8 @@ client.credentials({
   // add these two things however you want, if you
   // do not have them, just signup at `twilio.com`.
   //
-  sid: '',
-  token: ''
+  sid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  authToken: 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
 });
 
 //
@@ -20,16 +19,19 @@ client.SMS.send({
   //
   // put your twillio phone number here.
   //
-  from: '+1-111-111-1111',
+  from: '+19171239876',
 
   //
   // put your cell phone number here.
   //
-  to: '+1-111-111-1111',
+  to: '+19171239876',
 
   //
   // some message goes here.
   //
-  body: 'Hello'
+  body: 'Hello World'
 
+}, function(err, body) {
+  if (err) throw err;
+  console.log('Body: ' + body);
 });
