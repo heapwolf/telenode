@@ -19,10 +19,15 @@ Everything else sucks
 var Telenode = require('telenode');
 var client = new Telenode(Telenode.providers.twilio);
 
+client.credentials({
+  sid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  token: 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+});
+
 client.SMS.send({
-  from: '+1-917-123-9876', 
-  to: '+1-917-123-9876', 
-  body: 'Hello'
+  from: '+19171239876', 
+  to: '+19171239876', 
+  body: 'Hello World'
 }, function(err, body) {
   if (err) throw err;
   console.log('Body: ' + body);
