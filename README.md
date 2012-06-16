@@ -21,7 +21,7 @@ var client = new Telenode(Telenode.providers.twilio);
 
 client.credentials({
   sid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-  token: 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+  authToken: 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
 });
 
 client.SMS.send({
